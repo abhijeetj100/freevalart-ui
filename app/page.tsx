@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const sections = [
   {
     title: 'Portfolio and blog',
@@ -25,12 +27,12 @@ export default function HomePage() {
             manage commissions, sell products, and run classes without losing control of content.
           </p>
           <div className="actions">
-            <a className="button primary" href="/shop">
+            <Link className="button primary" href="/shop">
               Explore the shop
-            </a>
-            <a className="button" href="/custom-orders">
+            </Link>
+            <Link className="button" href="/custom-orders">
               Request a custom piece
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card">

@@ -267,6 +267,18 @@ h1 {
   color: var(--muted);
 }
 
+.post-body {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: var(--text);
+  max-width: 70ch;
+}
+
+.post-body p {
+  margin: 1.2rem 0;
+}
+
 .section h2 {
   margin-bottom: 12px;
   font-size: 1.7rem;

@@ -1,0 +1,43 @@
+{
+  "businessHours": [
+    {
+      "day": "Monday - Friday",
+      "hours": "10:00 AM - 6:00 PM PT"
+    },
+    {
+      "day": "Saturday",
+      "hours": "12:00 PM - 4:00 PM PT"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "responseTime": "We typically respond to inquiries within 24-48 hours. For urgent requests, please call or visit the studio in person.",
+  "studioAddress": {
+    "street": "123 Art Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94103",
+    "country": "USA"
+  },
+  "phone": "+1 (415) 555-0123",
+  "email": "hello@artistportfolio.com",
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com",
+      "username": "@artisthandle"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com",
+      "username": "@artisthandle"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/artist",
+      "username": "Artist Name"
+    }
+  ]
+}

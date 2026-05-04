@@ -22,10 +22,10 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="section contact-hero">
         <span className="kicker">Get in touch</span>
-        <h1>Let's talk about your project</h1>
+        <h1>Let&apos;s talk about your project</h1>
         <p className="lead">
-          Whether you're interested in commissioning a piece, taking a class, or just have a question,
-          I'd love to hear from you. Fill out the form below and I'll get back to you as soon as possible.
+          Whether you&apos;re interested in commissioning a piece, taking a class, or just have a question,
+          I&apos;d love to hear from you. Fill out the form below and I&apos;ll get back to you as soon as possible.
         </p>
       </section>
 

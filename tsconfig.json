@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@/lib/*": ["lib/*"],
-      "@/app/*": ["app/*"]
+      "@/app/*": ["app/*"],
+      "@/content/*": ["content/*"]
     },
     "plugins": [
       {

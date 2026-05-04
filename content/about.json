@@ -1,0 +1,88 @@
+{
+  "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+  "intro": "Visual artist exploring the intersection of color, form, and storytelling.",
+  "biography": "With over a decade of experience in contemporary visual arts, I've developed a distinctive practice rooted in observation and experimentation. My work spans multiple mediums—oil painting, watercolor, and mixed media—each offering unique possibilities for expression. I'm drawn to themes of light, memory, and the nuanced landscapes of everyday life.",
+  "artistJourney": [
+    {
+      "year": 2010,
+      "milestone": "Began formal art studies, exploring classical techniques and contemporary approaches"
+    },
+    {
+      "year": 2015,
+      "milestone": "First solo exhibition in San Francisco, focusing on color studies and abstraction"
+    },
+    {
+      "year": 2018,
+      "milestone": "Developed signature mixed media process combining traditional and digital methods"
+    },
+    {
+      "year": 2021,
+      "milestone": "Expanded practice to include community teaching and collaborative projects"
+    }
+  ],
+  "artistStatement": "My work investigates the emotional resonance of color and form. I believe art is a conversation between intention and discovery—what begins with careful planning often evolves into something unexpected. Through layers of paint, texture, and composition, I aim to create moments of stillness for the viewer, inviting them to slow down and notice the subtleties that often go unobserved. My practice is guided by curiosity and an ongoing commitment to growth.",
+  "professionalBackground": "I hold a Bachelor of Fine Arts degree from the California College of the Arts and have pursued advanced studies in contemporary painting practices. My work has been featured in regional galleries and public collections. I have taught workshops on color theory, composition, and mixed media techniques at various community centers and art institutions.",
+  "exhibitions": [
+    {
+      "title": "Color & Form: New Works",
+      "year": 2023,
+      "venue": "Modern Gallery, San Francisco",
+      "type": "Solo"
+    },
+    {
+      "title": "Contemporary Voices",
+      "year": 2022,
+      "venue": "Bay Area Arts Collective",
+      "type": "Group"
+    },
+    {
+      "title": "Abstract Narratives",
+      "year": 2021,
+      "venue": "Independent Project Space, Oakland",
+      "type": "Group"
+    },
+    {
+      "title": "New Perspectives",
+      "year": 2020,
+      "venue": "Municipal Gallery, San Jose",
+      "type": "Solo"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Bay Area Visual Arts Award",
+      "year": 2022,
+      "organization": "Arts Council Bay Area"
+    },
+    {
+      "title": "Artist Residency Fellowship",
+      "year": 2021,
+      "organization": "Creative Futures Program"
+    },
+    {
+      "title": "Community Arts Grant",
+      "year": 2019,
+      "organization": "San Francisco Arts Commission"
+    }
+  ],
+  "press": [
+    {
+      "title": "Rising Voices in Contemporary Art",
+      "publication": "Art Magazine Weekly",
+      "year": 2023,
+      "url": "#"
+    },
+    {
+      "title": "Exploring Color in Modern Practice",
+      "publication": "Creative Communities Journal",
+      "year": 2022,
+      "url": "#"
+    },
+    {
+      "title": "Local Artist Interview",
+      "publication": "Bay Area Arts Today",
+      "year": 2021,
+      "url": "#"
+    }
+  ]
+}

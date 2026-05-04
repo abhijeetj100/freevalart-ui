@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getArtworkEntries } from '@/lib/content';
+import { getRelatedArtworks } from '@/lib/content/content-query';
+import CommentSection from '@/app/components/CommentSection';
 import PageNav from '@/app/components/PageNav';
+import ShareButtons from '@/app/components/ShareButtons';
 
 interface PortfolioDetailProps {
   params: Promise<{ slug: string }>;
@@ -50,6 +53,11 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPro
       </main>
     );
   }
+
+  const relatedArtworks = getRelatedArtworks(
+    artworks.filter((entry) => entry.status === 'published'),
+    artwork
+  );
 
   return (
     <main>
@@ -115,8 +123,33 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPro
       </section>
 
       <section className="section">
+        <ShareButtons
+          description={artwork.excerpt}
+          path={`/portfolio/${artwork.slug}`}
+          title={artwork.title}
+        />
+      </section>
+
+      <section className="section">
         <div className="card">
-          <h3>Interested in this piece?</h3>
+          <h3>Related artworks</h3>
+          {relatedArtworks.length === 0 ? (
+            <p>No related artworks yet. Browse the full portfolio for more work.</p>
+          ) : (
+            <div className="related-grid">
+              {relatedArtworks.map((relatedArtwork) => (
+                <article className="card related-card" key={relatedArtwork.slug}>
+                  <Link href={`/portfolio/${relatedArtwork.slug}`}>
+                    <h4>{relatedArtwork.title}</h4>
+                  </Link>
+                  <p className="meta">
+                    {relatedArtwork.medium} • {relatedArtwork.year}
+                  </p>
+                  <p>{relatedArtwork.excerpt}</p>
+                </article>
+              ))}
+            </div>
+          )}
           <p>
             <Link className="button primary" href="/contact">
               Get in touch
@@ -127,6 +160,8 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPro
           </p>
         </div>
       </section>
+
+      <CommentSection storageKey={`portfolio-comments:${artwork.slug}`} title="Comments" />
     </main>
   );
 }

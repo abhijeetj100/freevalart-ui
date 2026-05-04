@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getBlogPostEntries } from '@/lib/content';
+import { getRelatedBlogPosts } from '@/lib/content/content-query';
+import CommentSection from '@/app/components/CommentSection';
 import PageNav from '@/app/components/PageNav';
+import ShareButtons from '@/app/components/ShareButtons';
 
 interface BlogDetailProps {
   params: Promise<{ slug: string }>;
@@ -52,6 +55,11 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
     );
   }
 
+  const relatedPosts = getRelatedBlogPosts(
+    posts.filter((entry) => entry.status === 'published'),
+    post
+  );
+
   return (
     <main>
       <PageNav />
@@ -99,8 +107,27 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
       </section>
 
       <section className="section">
+        <ShareButtons description={post.excerpt} path={`/blog/${post.slug}`} title={post.title} />
+      </section>
+
+      <section className="section">
         <div className="card">
-          <h3>More from the blog</h3>
+          <h3>Related posts</h3>
+          {relatedPosts.length === 0 ? (
+            <p>No related posts yet. Browse the full blog for more studio notes.</p>
+          ) : (
+            <div className="related-grid">
+              {relatedPosts.map((relatedPost) => (
+                <article className="card related-card" key={relatedPost.slug}>
+                  <Link href={`/blog/${relatedPost.slug}`}>
+                    <h4>{relatedPost.title}</h4>
+                  </Link>
+                  <p className="meta">{relatedPost.category}</p>
+                  <p>{relatedPost.excerpt}</p>
+                </article>
+              ))}
+            </div>
+          )}
           <p>
             <Link className="button" href="/blog">
               Back to all posts
@@ -108,6 +135,8 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
           </p>
         </div>
       </section>
+
+      <CommentSection storageKey={`blog-comments:${post.slug}`} title="Comments" />
     </main>
   );
 }

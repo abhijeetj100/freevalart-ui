@@ -134,6 +134,119 @@ h1 {
   max-width: 54ch;
 }
 
+.filter-panel {
+  margin-bottom: 18px;
+}
+
+.filter-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1.4fr repeat(4, minmax(0, 1fr));
+}
+
+.filter-field {
+  display: grid;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.filter-input,
+.filter-select,
+.filter-textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  font: inherit;
+  padding: 14px 16px;
+}
+
+.filter-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.filter-input:focus,
+.filter-select:focus,
+.filter-textarea:focus {
+  outline: 2px solid rgba(155, 93, 47, 0.25);
+  outline-offset: 2px;
+}
+
+.filter-actions,
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.filter-summary {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.related-card {
+  padding: 18px;
+}
+
+.share-panel {
+  margin-top: 0;
+}
+
+.comment-section {
+  display: grid;
+  gap: 18px;
+}
+
+.comment-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.comment-list {
+  display: grid;
+  gap: 14px;
+}
+
+.comment-item p {
+  margin-bottom: 0;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.comment-name {
+  font-size: 1rem;
+}
+
+.comment-date {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -183,6 +296,238 @@ h1 {
 
 .card h3 {
   margin-bottom: 10px;
+}
+
+/* About Page Styles */
+.about-hero {
+  margin-bottom: 56px;
+}
+
+.about-hero-content {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: start;
+}
+
+.about-intro h1 {
+  margin-bottom: 24px;
+}
+
+.about-intro .lead {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.about-profile-image {
+  position: sticky;
+  top: 100px;
+}
+
+.about-profile-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.about-journey h2,
+.about-statement h2,
+.about-background h2,
+.about-exhibitions h2,
+.about-awards h2,
+.about-press h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 16px;
+}
+
+.timeline {
+  display: grid;
+  gap: 32px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-year {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  position: relative;
+}
+
+.timeline-year::after {
+  content: '';
+  position: absolute;
+  right: -52px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding: 18px 24px;
+  background: rgba(155, 93, 47, 0.06);
+  border-radius: 16px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.7;
+}
+
+.artist-statement {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.9;
+  color: var(--muted);
+  padding: 32px 40px;
+  border-left: 4px solid var(--accent);
+  background: rgba(155, 93, 47, 0.05);
+  border-radius: 8px;
+  margin: 0 0 0 0;
+}
+
+.exhibitions-list,
+.awards-list,
+.press-list {
+  display: grid;
+  gap: 24px;
+}
+
+.exhibition-item,
+.award-item,
+.press-item {
+  padding: 24px;
+  background: rgba(255, 250, 242, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.exhibition-item:hover,
+.award-item:hover,
+.press-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(155, 93, 47, 0.12);
+}
+
+.exhibition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.exhibition-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.exhibition-year {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.exhibition-venue {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.exhibition-type {
+  color: var(--accent-dark);
+  font-size: 0.88rem;
+}
+
+.award-item h3,
+.press-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+}
+
+.award-item p,
+.press-item p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .about-hero-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-profile-image {
+    position: static;
+  }
+
+  .timeline-year::after {
+    right: -58px;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .about-journey h2,
+  .about-statement h2,
+  .about-background h2,
+  .about-exhibitions h2,
+  .about-awards h2,
+  .about-press h2 {
+    font-size: 1.5rem;
+  }
+
+  .artist-statement {
+    font-size: 1rem;
+    padding: 24px 20px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card p {
@@ -312,6 +657,11 @@ h1 {
   .gallery-grid,
   .post-grid,
   .class-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-grid,
+  .related-grid {
     grid-template-columns: 1fr;
   }
 
